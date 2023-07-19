@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 15:09:49 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/17 21:19:35 by livieira         ###   ########.fr       */
+/*   Created: 2023/07/18 19:42:09 by livieira          #+#    #+#             */
+/*   Updated: 2023/07/18 19:49:22 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft_point.h"
 
-char	*ft_strdup(char *src)
+void	set_point(t_point *point)
 {
-	char	*point;
-	int		i;
+	point->x = 42;
+	point->y = 21;
+}
 
-	i = 0;
-	while (src[i])
-	{
-		i++;
-	}
-	point = malloc(i + 1);
-	if (!point)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		point[i] = src[i];
-		i++;
-	}
-	point[i] = '\0';
-	return (point);
+#include <stdio.h>
+
+int	main(void)
+{
+	t_point	point;
+
+	set_point(&point);
+	printf("%i\n", point.x);
+	printf("%i\n", point.y);
+	return (0);
 }

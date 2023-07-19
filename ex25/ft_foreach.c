@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 15:09:49 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/17 21:19:35 by livieira         ###   ########.fr       */
+/*   Created: 2023/07/18 22:41:06 by livieira          #+#    #+#             */
+/*   Updated: 2023/07/18 23:53:34 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char	*ft_strdup(char *src)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	char	*point;
-	int		i;
+	int	i;
 
 	i = 0;
-	while (src[i])
+	while (i < length)
 	{
+		f(tab[i]);
 		i++;
 	}
-	point = malloc(i + 1);
-	if (!point)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		point[i] = src[i];
-		i++;
-	}
-	point[i] = '\0';
-	return (point);
 }

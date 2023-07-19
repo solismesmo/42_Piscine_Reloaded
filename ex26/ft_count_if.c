@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 15:09:49 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/17 21:19:35 by livieira         ###   ########.fr       */
+/*   Created: 2023/07/18 23:55:23 by livieira          #+#    #+#             */
+/*   Updated: 2023/07/18 23:55:30 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char	*ft_strdup(char *src)
+int	ft_count_if(char **tab, int length, int (*f)(char*))
 {
-	char	*point;
-	int		i;
+	int	i;
+	int	count;
 
+	count = 0;
 	i = 0;
-	while (src[i])
+	while (i < length)
 	{
+		if ((*f)(tab[i]))
+			count++;
 		i++;
 	}
-	point = malloc(i + 1);
-	if (!point)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		point[i] = src[i];
-		i++;
-	}
-	point[i] = '\0';
-	return (point);
+	return (count);
 }
