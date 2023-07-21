@@ -6,11 +6,9 @@
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 11:29:01 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/14 22:29:36 by livieira         ###   ########.fr       */
+/*   Updated: 2023/07/17 20:53:06 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_strcmp(char *s1, char *s2);
 
 int	ft_strcmp(char *s1, char *s2)
 {

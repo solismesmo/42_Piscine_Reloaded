@@ -5,47 +5,45 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 15:34:16 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/14 22:32:30 by livieira         ###   ########.fr       */
+/*   Created: 2023/07/17 21:06:11 by livieira          #+#    #+#             */
+/*   Updated: 2023/07/17 21:27:53 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
 void	ft_putchar(char c);
-/* {
-	write(1, &c, 1);
-} */
 
-void	ft_putstr(char *str);
-/* {
+void	ft_putstr(char *str)
+{
 	int	i;
 
 	i = 0;
 	while (str[i])
+	{
+		ft_putchar(str[i]);
 		i++;
-	write(1, str, i);
-} */
+	}
+}
 
-void	ft_print_arr(char **arr);
-/* {
+void	ft_print_arr(char **arr)
+{
 	while (*arr)
 	{
 		ft_putstr(*arr++);
 		ft_putchar('\n');
 	}
-} */
+}
 
-int		ft_strcmp(char *s1, char *s2);
-/* {
+static int	ft_strcmp(char *s1, char *s2)
+{
 	while (*s1 && (*s1 == *s2))
 	{
 		s1 += 1;
 		s2 += 1;
 	}
 	return (*(unsigned char *)s1 - *(unsigned char *)s2);
-} */
+}
 
 int	main(int argc, char *argv[])
 {

@@ -6,16 +6,13 @@
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 22:12:42 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/14 22:28:57 by livieira         ###   ########.fr       */
+/*   Updated: 2023/07/17 21:01:35 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	ft_putchar(char c);
-/* {
-	write(1, &c, 1);
-} */
 
 void	ft_putstr(char *str)
 {

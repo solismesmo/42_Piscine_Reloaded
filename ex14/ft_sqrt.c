@@ -6,11 +6,9 @@
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 20:52:18 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/14 22:28:46 by livieira         ###   ########.fr       */
+/*   Updated: 2023/07/17 20:50:54 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_sqrt(int nb);
 
 int	ft_sqrt(int nb)
 {

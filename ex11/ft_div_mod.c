@@ -6,11 +6,9 @@
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:19:56 by livieira          #+#    #+#             */
-/*   Updated: 2023/07/14 22:28:17 by livieira         ###   ########.fr       */
+/*   Updated: 2023/07/17 20:52:33 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_div_mod(int a, int b, int *div, int *mod);
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
